@@ -1,0 +1,1129 @@
+/*
+  mediaQueries-v6-laptops.css — Laptop-specific height + width combinations
+
+  Purpose:
+  - Provides precise styling for common laptop viewport dimensions
+  - Based on the Laptop Viewport Matrix analysis (Small, Standard, and Large laptops)
+  - Loaded after mediaQueries-v6.css and mediaQueries-v6-landscape.css
+  
+  Coverage:
+  - Small Laptop (1024px): 640px, 680px, 700px, 750px heights
+  - Standard Laptop (1366px): 760px, 800px, 820px, 850px, 900px heights
+  - Large Laptop (1600px+): 940px, 980px, 1050px, 1100px heights
+  
+  Queries are sorted by:
+  1. Minimum width (ascending)
+  2. Height (ascending, when width is the same)
+*/
+
+/* ========================================
+   SMALL LAPTOP TIER (1024px width)
+   ======================================== */
+
+/* Small Laptop: 1024 × 640 */
+@media (min-width: 1024px) and (max-width: 1024px) 
+  and (min-height: 640px) and (max-height: 640px)
+{
+  .header-title
+  {
+    font-size: 5rem !important;
+    top: 1.5%;
+    margin-top: 0.6875rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-20vh) !important;
+    width: min(82vw, 70rem) !important;
+    height: clamp(20rem, 30vh, 42rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-15.5vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 72rem) !important;
+    min-height: 10rem !important;
+    max-height: 12rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-4vh) !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.75rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 2vh, 2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Small Laptop: 1024 × 680 */
+@media (min-width: 1024px) and (max-width: 1024px) 
+  and (min-height: 680px) and (max-height: 680px)
+  {
+    .header-title
+    {
+      font-size: 5rem !important;
+      top: 1.5%;
+      margin-top: 0.6875rem;
+    }
+  
+    .stacked-cards
+    {
+      position: relative !important;
+      transform: translateY(-20vh) !important;
+      width: min(82vw, 70rem) !important;
+      height: clamp(20rem, 30vh, 42rem) !important;
+      box-sizing: border-box !important;
+      margin: 0 auto !important;
+    }
+  
+    #phase-selection-container
+    {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex: 0 0 100% !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      left: 50% !important;
+      transform: translateX(-50%) translateY(-15.5vh) !important;
+    }
+  
+    .text-container
+    {
+      width: min(90vw, 72rem) !important;
+      min-height: 10rem !important;
+      max-height: 12rem !important;
+      box-sizing: border-box !important;
+      margin: 0.3125rem auto 0 !important;
+      transform: translateY(-4vh) !important;
+      overflow-y: auto !important;
+    }
+  
+    .text-container p
+    {
+      font-size: 0.75rem !important;
+    }
+  
+    .text-container ul,
+    .text-container ol
+    {
+      margin: 6px 0 !important;
+      padding-left: 20px !important;
+      list-style-position: outside !important;
+    }
+  
+    .text-container li
+    {
+      font-size: 0.75rem !important;
+      margin-bottom: 2px !important;
+      list-style: inherit !important;
+    }
+  
+    footer
+    {
+      position: fixed !important;
+      left: clamp(0.5rem, 3vw, 3rem) !important;
+      bottom: clamp(0.5rem, 2vh, 2rem) !important;
+      padding-left: 0.6875rem !important;
+      z-index: 100;
+    }
+}
+
+/* Small Laptop: 1024 × 700 */
+@media (min-width: 1024px) and (max-width: 1024px) 
+  and (min-height: 700px) and (max-height: 700px)
+{
+  .header-title
+  {
+    font-size: 5rem !important;
+    top: 1.5%;
+    margin-top: 0.6875rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-20vh) !important;
+    width: min(82vw, 70rem) !important;
+    height: clamp(20rem, 30vh, 42rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-15.5vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 72rem) !important;
+    min-height: 10rem !important;
+    max-height: 12rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-4vh) !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.75rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 2vh, 2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Small Laptop: 1024 × 750 */
+@media (min-width: 1024px) and (max-width: 1024px) 
+  and (min-height: 750px) and (max-height: 750px)
+{
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 1.5%;
+    margin-top: 0.6875rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-20vh) !important;
+    width: min(82vw, 70rem) !important;
+    height: clamp(20rem, 30vh, 42rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-15.5vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 72rem) !important;
+    min-height: 10rem !important;
+    max-height: 12rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-4vh) !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.75rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 2vh, 2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* ========================================
+   STANDARD LAPTOP TIER (1366px width)
+   ======================================== */
+
+/* Standard Laptop: 1366 × 760 */
+@media (min-width: 1366px) and (max-width: 1366px) 
+  and (min-height: 760px) and (max-height: 760px)
+{
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+    /*margin-top: 0.6rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-12vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -3.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 14rem !important;
+    max-height: 17rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -0.5rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Standard Laptop: 1366 × 800 */
+@media (min-width: 1366px) and (max-width: 1366px) 
+  and (min-height: 800px) and (max-height: 800px)
+{
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+    /*margin-top: 0.6rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-8vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -2.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 22rem !important;
+    max-height: 27rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -0.5rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Standard Laptop: 1366 × 820 */
+@media (min-width: 1366px) and (max-width: 1366px) 
+  and (min-height: 820px) and (max-height: 820px)
+{
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+    /*margin-top: 0.6rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-8vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -2.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 22rem !important;
+    max-height: 27rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -0.5rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Standard Laptop: 1366 × 850 */
+@media (min-width: 1366px) and (max-width: 1366px) 
+  and (min-height: 850px) and (max-height: 850px)
+{
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+    /*margin-top: 0.6rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-8vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -2.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 22rem !important;
+    max-height: 27rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -0.5rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Standard Laptop: 1366 × 900 */
+@media (min-width: 1366px) and (max-width: 1366px) 
+  and (min-height: 900px) and (max-height: 900px)
+{
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+    /*margin-top: 0.6rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-14vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -6.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 22rem !important;
+    max-height: 27rem !important;
+    box-sizing: border-box !important;
+    margin: 0.1rem auto 0 !important;
+    position: relative !important;
+    top: -1.9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* ========================================
+   LARGE LAPTOP TIER (1600px+ width)
+   ======================================== */
+
+/* Large Laptop: 1600 × 940 */
+@media (min-width: 1600px) and (max-width: 1600px) 
+  and (min-height: 940px) and (max-height: 940px)
+{
+  .header-title
+  {
+    font-size: 11rem !important;
+    top: 3.0%;
+    /*margin-top: 0.55rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(99vw, 100vw) !important;
+    height: clamp(34rem, 46rem, 132rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -11.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 85rem) !important;
+    min-height: 18rem !important;
+    max-height: 24rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.65rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.65rem !important;
+    margin-bottom: 3px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Large Laptop: 1600 × 980 */
+@media (min-width: 1600px) and (max-width: 1600px) 
+  and (min-height: 980px) and (max-height: 980px)
+{
+  .header-title
+  {
+    font-size: 11rem !important;
+    top: 3.0%;
+    /*margin-top: 0.55rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(99vw, 100vw) !important;
+    height: clamp(34rem, 46rem, 132rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -11.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 85rem) !important;
+    min-height: 18rem !important;
+    max-height: 24rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.65rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.65rem !important;
+    margin-bottom: 3px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1600px) 
+  and (min-height: 996px) and (max-height: 996px)
+{
+  .header-title
+  {
+    font-size: 11rem !important;
+    top: 3.0%;
+    /*margin-top: 0.55rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(99vw, 100vw) !important;
+    height: clamp(34rem, 46rem, 132rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -11.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 85rem) !important;
+    min-height: 18rem !important;
+    max-height: 24rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.65rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.65rem !important;
+    margin-bottom: 3px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+/* Large Laptop: 1600 × 1050 */
+@media (min-width: 1600px) and (max-width: 1600px) 
+  and (min-height: 1050px) and (max-height: 1050px)
+{
+  .header-title
+  {
+    font-size: 11rem !important;
+    top: 3.0%;
+    /*margin-top: 0.55rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(99vw, 100vw) !important;
+    height: clamp(34rem, 46rem, 132rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -11.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 85rem) !important;
+    min-height: 18rem !important;
+    max-height: 24rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.65rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.65rem !important;
+    margin-bottom: 3px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Large Laptop: 1600 × 1100 */
+@media (min-width: 1600px) and (max-width: 1600px) 
+  and (min-height: 1100px) and (max-height: 1100px)
+{
+  .header-title
+  {
+    font-size: 11rem !important;
+    top: 3.0%;
+    /*margin-top: 0.55rem;*/
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(99vw, 100vw) !important;
+    height: clamp(34rem, 46rem, 132rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -11.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 85rem) !important;
+    min-height: 18rem !important;
+    max-height: 24rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.65rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.65rem !important;
+    margin-bottom: 3px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* EOF */

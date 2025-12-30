@@ -1,0 +1,81 @@
+.btn-primary.phase-01, .card-header.phase-1 {
+ background-color : black !important;
+ border-color     : black !important;
+ color            : white !important;
+}
+
+.btn-primary.phase-02, .card-header.phase-2 {
+ background-color : navy !important;
+ border-color     : navy !important;
+ color            : white !important;
+}
+
+.btn-primary.phase-03, .card-header.phase-3 {
+ background-color : purple !important;
+ border-color     : purple !important;
+ color            : white !important;
+}
+
+.btn-primary.phase-04, .card-header.phase-4 {
+ background-color : gray !important;
+ border-color     : gray !important;
+ color            : white !important;
+}
+
+.btn-primary.phase-05, .card-header.phase-5 {
+ background-color : white !important;
+ border-color     : white !important;
+ color            : black !important;
+}
+
+#phase-selection-container.hide-initially {
+ opacity    : 0;
+ transition : opacity 0.5s ease;
+}
+
+#phase-selection-container .btn-group .btn.btn-primary.active {
+ font-weight : bold !important;
+ color       : plum !important;
+ border: 1px solid whitesmoke !important;
+}
+
+.btn-group a {
+ letter-spacing : 0.09em;
+}
+
+#phase-selection-container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 1;
+    margin: 0 auto;
+    width: auto;
+ /*margin-top: -9px !important;*/
+}
+
+#phase-selection-container .btn-group {
+    display: flex;
+    flex-direction: row;
+    gap: 11px; /* Changed from 3px to 7px */
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+#phase-selection-container .btn-group .btn {
+    width: 95px;
+    /* Removed width, min-width, and max-width for Firefox JS fix */
+    height: 35px !important; /* Keep the existing height */
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 17px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

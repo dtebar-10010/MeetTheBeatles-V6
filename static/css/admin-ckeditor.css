@@ -1,0 +1,39 @@
+/* Override for CKEditor in admin */
+.django-ckeditor-5 .ck-editor__main .ck-content {
+  background-color: white !important;
+  color: black !important;
+}
+
+.django-ckeditor-5 .ck-editor__editable {
+  background-color: white !important;
+  color: black !important;
+  min-height: 200px;
+}
+
+.django-ckeditor-5 .ck-editor__editable * {
+  color: black !important;
+}
+
+.django-ckeditor-5 .ck-editor__editable p,
+.django-ckeditor-5 .ck-editor__editable span,
+.django-ckeditor-5 .ck-editor__editable div,
+.django-ckeditor-5 .ck-editor__editable h1,
+.django-ckeditor-5 .ck-editor__editable h2,
+.django-ckeditor-5 .ck-editor__editable h3,
+.django-ckeditor-5 .ck-editor__editable h4,
+.django-ckeditor-5 .ck-editor__editable h5,
+.django-ckeditor-5 .ck-editor__editable h6,
+.django-ckeditor-5 .ck-editor__editable li {
+  color: black !important;
+}
+
+/* Force black text in the editor */
+.ck.ck-editor__editable_inline {
+  background: white !important;
+  color: black !important;
+}
+
+/* Ensure text entered by user is visible */
+.ck.ck-editor__editable_inline > * {
+  color: black !important;
+}

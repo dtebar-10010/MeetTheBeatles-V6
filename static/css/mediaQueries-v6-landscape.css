@@ -1,0 +1,3174 @@
+/*
+  mediaQueries-v6-landscape.css — Landscape-only overrides
+
+  Purpose:
+  - Contains only landscape-orientation overrides for `mediaQueries-v6.css`.
+  - Loaded after `mediaQueries-v6.css` so rules cascade and override where intended.
+  - Avoid duplicating whole rule blocks; include only the properties that need to differ in landscape.
+
+  Notes & best practices:
+  - Use `@media (orientation: landscape) and (min-width: Xpx) and (max-width: Ypx)` to target
+    the same breakpoint ranges but only in landscape orientation.
+  - Keep selectors equally or more specific than the original file. Because the original file
+    frequently uses `!important`, you may need `!important` in a small number of overrides
+    until you can safely refactor specificity out of the main file.
+  - Test in Chrome DevTools (Device Toolbar → rotate) and inspect computed styles to ensure
+    landscape rules only apply where intended.
+  
+  Queries are sorted by:
+  1. Minimum width (ascending)
+  2. Height (ascending, when width is the same)
+*/
+
+/* Global landscape list styles for narrow viewports (320-850px) */
+@media (orientation: landscape) and (min-width: 320px) and (max-width: 849px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .text-container
+  {
+    display: block !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container ul,
+  .text-container ol,
+  .text-container .history-entry ul,
+  .text-container .history-entry ol
+  {
+    list-style-position: inside !important;
+    width: 100% !important;
+  }
+
+  .text-container ul,
+  .text-container .history-entry ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol,
+  .text-container .history-entry ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li,
+  .text-container .history-entry li
+  {
+    display: list-item !important;
+    list-style: inherit !important;
+  }
+}
+
+/* General landscape fallback across phone+tablet sizes (320-1368) */
+@media (orientation: landscape) and (min-width: 320px) and (max-width: 1368px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  /* Example: reduce vertical translate when device is in landscape */
+  .stacked-cards
+  {
+    transform: translateY(-8vh) !important;
+    /* gentler pull-up in landscape */
+    height: clamp(8rem, 40vh, 20rem) !important;
+    /* prefer shorter height in landscape */
+  }
+
+  /* Example: position footer a bit higher in landscape to avoid overlapping content */
+  footer
+  {
+    bottom: clamp(0.5rem, 2vh, 1.5rem) !important;
+  }
+}
+
+/* Narrow phones rotated to landscape (compact height): 320–344 */
+@media (orientation: landscape) and (min-width: 320px) and (max-width: 344px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    width: min(95vw, 30rem);
+    transform: translateY(-6vh) !important;
+    height: clamp(8rem, 38vh, 18rem);
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    transform: translateY(-8vh) !important;
+    /* adjust button vertical placement without changing size */
+  }
+}
+
+/* Phones landscape: 345–415 */
+@media (orientation: landscape) and (min-width: 345px) and (max-width: 415px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-10vh) !important;
+    width: min(94vw, 44rem);
+    height: clamp(10rem, 45vh, 20rem);
+  }
+
+  .text-container
+  {
+    transform: translateY(-6vh) !important;
+  }
+}
+
+/* Small phones → small tablets landscape: 416–599 */
+@media (orientation: landscape) and (min-width: 416px) and (max-width: 599px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-8vh) !important;
+    height: clamp(9rem, 40vh, 20rem);
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-18vh) !important;
+  }
+
+  .text-container
+  {
+    max-height: 10rem;
+    transform: translateY(-6vh) !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 2vh, 1.2rem) !important;
+  }
+}
+
+/* Specific landscape: 480 × 320 */
+@media (orientation: landscape) and (min-width: 480px) and (max-width: 480px) and (min-height: 320px) and (max-height: 320px)
+{
+  .header-title
+  {
+    font-size: clamp(2rem, 2.3rem, 3rem) !important;
+    top: 1.4%;
+    margin-top: 0.7rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(5vh) !important;
+    width: min(82vw, 74vw) !important;
+    height: clamp(9rem, 28rem, 38rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-3vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 88px;
+    height: 26px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.28em;
+    font-size: 12px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(8rem, 9rem, 14rem) !important;
+    min-height: 8rem !important;
+    width: min(86vw, 72rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.25rem auto 0 !important;
+    transform: translateY(0vh) !important;
+    font-size: 0.95rem !important;
+    font-weight: 400 !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.05rem !important;
+    font-weight: 100 !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.95rem !important;
+    margin-bottom: 4px !important;
+    margin-left: 0 !important;
+    display: list-item !important;
+    list-style: inherit !important;
+  }
+
+  footer a
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 0.7rem, 1.0rem) !important;
+    bottom: clamp(0.20rem, 0.23rem, 0.26rem) !important;
+    padding-left: 0.10rem !important;
+    padding-bottom: 0.20rem !important;
+    z-index: 100;
+  }
+}
+
+/* Larger screens (desktop landscape: 1024–1199) */
+@media (orientation: landscape) and (min-width: 1024px) and (max-width: 1199px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  /* Ensure phase container centers neatly in wide landscape */
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+/* Tablet landscape (600–819px) */
+@media (orientation: landscape) and (min-width: 600px) and (max-width: 819px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 3rem, 5rem) !important;
+    top: 1.5%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(3vh) !important;
+    width: min(80vw, 72vw) !important;
+    height: clamp(10rem, 36rem, 43rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-7vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    /* Removed width, min-width, and max-width for Firefox JS fix */
+    height: 27px !important;
+    /* Keep the existing height */
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 14px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(9rem, 9rem, 15rem) !important;
+    /* replaces 20% */
+    min-height: 9rem !important;
+    /* ~80px */
+    width: min(90vw, 44rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    /* 5px */
+    transform: translateY(-2vh) !important;
+    font-size: 1.00rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.15rem !important;
+    /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+}
+
+/* Specific landscape: 640 × 360 */
+@media (orientation: landscape) and (min-width: 640px) and (max-width: 640px) and (min-height: 360px) and (max-height: 360px)
+{
+  .header-title
+  {
+    font-size: clamp(2rem, 2.3rem, 3rem) !important;
+    top: 1.4%;
+    margin-top: 0.7rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(5vh) !important;
+    width: min(82vw, 74vw) !important;
+    height: clamp(9rem, 28rem, 38rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-3vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 88px;
+    height: 26px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.28em;
+    font-size: 12px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(8rem, 9rem, 14rem) !important;
+    min-height: 8rem !important;
+    width: min(86vw, 72rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.25rem auto 0 !important;
+    transform: translateY(0vh) !important;
+    font-size: 0.95rem !important;
+    font-weight: 400 !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.05rem !important;
+    font-weight: 100 !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: inside !important;
+    list-style-type: disc !important;
+    width: 100% !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.95rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer a
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 0.7rem, 1.0rem) !important;
+    bottom: clamp(0.20rem, 0.23rem, 0.26rem) !important;
+    padding-left: 0.10rem !important;
+    padding-bottom: 0.20rem !important;
+    z-index: 100;
+  }
+}
+
+/* Specific landscape: 658 × 320 */
+@media (orientation: landscape) and (min-width: 658px) and (max-width: 658px) and (min-height: 320px) and (max-height: 320px)
+{
+  .header-title
+  {
+    font-size: clamp(2.0rem, 2.0rem, 2.0rem) !important;
+    top: 1.3%;
+    margin-top: 0.3rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(3.2vh) !important;
+    width: min(82vw, 74vw) !important;
+    height: clamp(9rem, 28rem, 38rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-2vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 88px;
+    height: 18px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.28em;
+    font-size: 11px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(8rem, 9rem, 14rem) !important;
+    min-height: 8rem !important;
+    width: min(86vw, 72rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.25rem auto 0 !important;
+    transform: translateY(0vh) !important;
+    font-size: 0.95rem !important;
+    font-weight: 400 !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.05rem !important;
+    font-weight: 100 !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: inside !important;
+    list-style-type: disc !important;
+    width: 100% !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.95rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer a
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 0.7rem, 1.0rem) !important;
+    bottom: clamp(0.20rem, 0.23rem, 0.26rem) !important;
+    padding-left: 0.10rem !important;
+    padding-bottom: 0.20rem !important;
+    z-index: 100;
+  }
+}
+
+/* Specific landscape: 740 × 360 */
+@media (orientation: landscape) and (min-width: 740px) and (max-width: 740px) and (min-height: 360px) and (max-height: 360px)
+{
+  .header-title
+  {
+    font-size: clamp(2rem, 2.5rem, 3rem) !important;
+    top: 1.4%;
+    margin-top: 0.7rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(5vh) !important;
+    width: min(82vw, 74vw) !important;
+    height: clamp(9rem, 28rem, 38rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-3vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 92px;
+    height: 26px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.28em;
+    font-size: 13px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(8rem, 9rem, 14rem) !important;
+    min-height: 8rem !important;
+    width: min(86vw, 72rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.25rem auto 0 !important;
+    transform: translateY(0vh) !important;
+    font-size: 0.95rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.05rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: inside !important;
+    list-style-type: disc !important;
+    width: 100% !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.95rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer a
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 0.7rem, 1rem) !important;
+    bottom: clamp(0.30rem, 0.43rem, 0.66rem) !important;
+    padding-left: 0.10rem !important;
+    padding-bottom: 0.50rem !important;
+    z-index: 100;
+  }
+}
+
+/* Large tablet / small desktop landscape (820–1023px) */
+@media (orientation: landscape) and (min-width: 820px) and (max-width: 1023px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-5vh) !important;
+    width: min(90vw, 64rem) !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.85rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+}
+
+/* Specific landscape: 823 × 411 */
+@media (orientation: landscape) and (min-width: 823px) and (max-width: 823px) and (min-height: 411px) and (max-height: 411px)
+{
+  .stacked-cards
+  {
+    transform: translateY(-8vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transform: translateY(7.00rem) !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    height: 27px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 14px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(4rem, 5rem, 7rem) !important;
+    min-height: 9rem !important;
+    font-size: 0.95rem !important;
+    top: 3.85rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.00rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.95rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer a
+  {
+    top: 2.3vh !important;
+  }
+}
+
+/* Specific landscape: 844 × 390 */
+@media (orientation: landscape) and (min-width: 844px) and (max-width: 844px) and (min-height: 390px) and (max-height: 390px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(4vh) !important;
+    width: min(80vw, 72vw) !important;
+    height: clamp(10rem, 30rem, 40rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-2vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    /* Removed width, min-width, and max-width for Firefox JS fix */
+    height: 27px !important;
+    /* Keep the existing height */
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 14px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(9rem, 9rem, 15rem) !important;
+    /* replaces 20% */
+    min-height: 9rem !important;
+    /* ~80px */
+    width: min(85vw, 111rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    /* 5px */
+    transform: translateY(1vh) !important;
+    font-size: 1.00rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.15rem !important;
+    /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: inside !important;
+    width: 100% !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+}
+
+/* Global landscape list styles for wider viewports (850px+) */
+@media (orientation: landscape) and (min-width: 850px) and (max-width: 1920px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    display: list-item !important;
+    list-style: inherit !important;
+  }
+}
+
+/* Devices ~896w × 414h landscape */
+@media (orientation: landscape) and (min-width: 880px) and (max-width: 920px) and (min-height: 400px) and (max-height: 430px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 3rem, 5rem) !important;
+    top: 1.5%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(3vh) !important;
+    width: min(80vw, 72vw) !important;
+    height: clamp(10rem, 36rem, 43rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(15vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    /* Removed width, min-width, and max-width for Firefox JS fix */
+    height: 27px !important;
+    /* Keep the existing height */
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 14px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(9rem, 9rem, 15rem) !important;
+    /* replaces 20% */
+    min-height: 9rem !important;
+    /* ~80px */
+    width: min(85vw, 111rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    /* 5px */
+    transform: translateY(-2vh) !important;
+    font-size: 1.00rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.15rem !important;
+    /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+}
+
+/* Specific landscape: 882 × 344 */
+@media (orientation: landscape) and (min-width: 882px) and (max-width: 882px) and (min-height: 344px) and (max-height: 344px)
+{
+  .header-title
+  {
+    font-size: clamp(1.5rem, 1.8rem, 1.9rem) !important;
+    top: 1.1%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-13vh) !important;
+    width: min(90vw, 64rem) !important;
+    height: clamp(0.3%, 0.5%, 0.8%) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(2%) !important;
+  }
+
+  /* Keep phase selection buttons on a single non-wrapping row for this device */
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+    overflow-x: auto !important;
+    /* allow horizontal scroll rather than wrap */
+    -webkit-overflow-scrolling: touch !important;
+    top: 5rem !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    flex: 0 0 auto !important;
+    /* do not stretch or shrink into multiple rows */
+    white-space: nowrap !important;
+    min-width: 0 !important;
+    height: 9px !important;
+    font-size: 8px !important;
+  }
+
+  .text-container
+  {
+    max-height: 7rem !important;
+    transform: translateY(8vh) !important;
+    font-size: .30rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.30rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+}
+
+/* Specific landscape: 932 × 430 */
+@media (orientation: landscape) and (min-width: 932px) and (max-width: 932px) and (min-height: 430px) and (max-height: 430px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 2.2rem, 3.2rem) !important;
+    top: 1.2%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(2vh) !important;
+    width: min(82vw, 75vw) !important;
+    height: clamp(10rem, 32rem, 42rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-3vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    height: 27px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 14px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(9rem, 10rem, 16rem) !important;
+    min-height: 9rem !important;
+    width: min(85vw, 111rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(0vh) !important;
+    font-size: 1.00rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.15rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 4rem, 5rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-32vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 33vh, 22rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    position: relative !important;
+    top: -4vh !important;
+    transform: translateX(-50%) translateY(-10vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    height: 26px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 13px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 75rem) !important;
+    min-height: 14rem !important;
+    max-height: 18rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-1vh) !important;
+    font-size: 1.00rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.05rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.9rem) !important;
+  }
+}
+
+
+/* Specific landscape: 1024 × 600 */
+@media (orientation: landscape) and (min-width: 1024px) and (max-width: 1024px) and (min-height: 600px) and (max-height: 600px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 4rem, 5rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-12vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 33vh, 22rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    position: relative !important;
+    top: -4vh !important;
+    transform: translateX(-50%) translateY(0vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    height: 26px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 13px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 75rem) !important;
+    min-height: 14rem !important;
+    max-height: 18rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-1vh) !important;
+    font-size: 1.00rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.05rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.9rem) !important;
+  }
+}
+
+/* Larger screens (desktop landscape: 1024–1199) */
+@media (orientation: landscape) and (min-width: 1024px) and (max-width: 1199px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  /* Ensure phase container centers neatly in wide landscape */
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+/* Very large desktop landscape (1200px and up) */
+@media (orientation: landscape) and (min-width: 1200px)
+{
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+/* Specific landscape: 1280 × 853 */
+@media (orientation: landscape) and (min-width: 1280px) and (max-width: 1280px) and (min-height: 853px) and (max-height: 853px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 5rem, 7rem) !important;
+    top: 1.4%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    top: -15vh !important;
+    width: min(80vw, 82rem) !important;
+    height: clamp(12rem, 35vh, 24rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    position: relative !important;
+    top: -15vh !important;
+    width: min(80vw, 82rem) !important;
+    height: clamp(1rem, 2rem, 3rem) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 100px;
+    height: 28px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 15px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    position: relative !important;
+    width: min(90vw, 99vw) !important;
+    min-height: 18rem !important;
+    max-height: 22rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    top: -11vh !important;
+    font-size: 1.10rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.15rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.05rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.9rem) !important;
+  }
+}
+
+/* Specific landscape: 1368 × 912 (iPad Pro 11") */
+@media (orientation: landscape) and (min-width: 1368px) and (max-width: 1368px) and (min-height: 912px) and (max-height: 912px)
+{
+  .header-title
+  {
+    font-size: clamp(4rem, 6rem, 7rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    /* Slightly gentler vertical offset on iPad Pro */
+    transform: translateY(-26vh) !important;
+    width: min(75vw, 85vw) !important;
+    height: clamp(12rem, 34vh, 24rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-16vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(86vw, 82rem) !important;
+    min-height: 12rem !important;
+    max-height: 16rem !important;
+    margin: 0.25rem auto 0 !important;
+    transform: translateY(-1vh) !important;
+    font-size: 1.05rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.15rem !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.9rem) !important;
+  }
+}
+
+/* Specific landscape: 568 × 320 */
+@media (orientation: landscape) and (min-width: 568px) and (max-width: 568px) 
+and (min-height: 320px) and (max-height: 320px){
+  .header-title
+  {
+    font-size: clamp(2rem, 2.3rem, 3rem) !important;
+    top: 1.4%;
+    margin-top: 0.7rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(5vh) !important;
+    width: min(82vw, 74vw) !important;
+    height: clamp(9rem, 28rem, 38rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-3vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 88px;
+    height: 26px !important;
+    border-radius: 7px;
+    color: white;
+    padding: 0.28em;
+    font-size: 12px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(8rem, 9rem, 14rem) !important;
+    min-height: 8rem !important;
+    width: min(86vw, 72rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.25rem auto 0 !important;
+    transform: translateY(0vh) !important;
+    font-size: 0.95rem !important;
+    font-weight: 400 !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.05rem !important;
+    font-weight: 100 !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.95rem !important;
+    margin-bottom: 4px !important;
+    margin-left: 0 !important;
+    display: list-item !important;
+    list-style: inherit !important;
+  }
+
+  footer a
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 0.7rem, 1.0rem) !important;
+    bottom: clamp(0.20rem, 0.23rem, 0.26rem) !important;
+    padding-left: 0.10rem !important;
+    padding-bottom: 0.20rem !important;
+    z-index: 100;
+  }
+}
+
+
+/* Specific landscape: 812 × 375 */
+@media (orientation: landscape) and (min-width: 812px) and (max-width: 812px) 
+and (min-height: 375px) and (max-height: 375px){
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(4vh) !important;
+    width: min(80vw, 72vw) !important;
+    height: clamp(10rem, 30rem, 40rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-2vh) !important;
+  }
+
+  #phase-selection-container .btn-group
+  {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 5px !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 95px;
+    /* Removed width, min-width, and max-width for Firefox JS fix */
+    height: 27px !important;
+    /* Keep the existing height */
+    border-radius: 7px;
+    color: white;
+    padding: 0.3em;
+    font-size: 14px !important;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-container
+  {
+    max-height: clamp(9rem, 9rem, 15rem) !important;
+    /* replaces 20% */
+    min-height: 9rem !important;
+    /* ~80px */
+    width: min(85vw, 111rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    /* 5px */
+    transform: translateY(1vh) !important;
+    font-size: 1.00rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.15rem !important;
+    /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: inside !important;
+    width: 100% !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+}
+
+/* ==================================================================
+   Exact landscape device media queries for large and laptop devices.
+   ================================================================= */
+
+/* COMMENTED OUT - START
+@media (min-width: 3840px) {
+  3840 × 2160 (4K) and larger - orientation removed for desktop/DevTools
+  .header-title
+  {
+    font-size: clamp(5rem, 8rem, 12rem) !important;
+    top: 2.5%;
+    margin-top: 1.5rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-12vh) !important;
+    width: min(75vw, 95rem) !important;
+    height: clamp(18rem, 38vh, 32rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-8vh) !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    width: 120px;
+    height: 35px !important;
+    font-size: 18px !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 100rem) !important;
+    min-height: 12rem !important;
+    max-height: 18rem !important;
+    transform: translateY(-3vh) !important;
+    font-size: 1.25rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 1.35rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 25px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.20rem !important;
+    margin-bottom: 5px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.8rem, 1.5vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 4096px) and (max-width: 4096px) 
+and (min-height: 2160px) and (max-height: 2160px) {
+  4096 × 2160 (4K UHD)
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 31.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 2560px) 
+and (min-height: 1600px) and (max-height: 1600px) {
+  2560 × 1600
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 2048px) and (max-width: 2048px) 
+and (min-height: 1536px) and (max-height: 1536px) {
+  2048 × 1536
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 1920px) 
+and (min-height: 1080px) and (max-height: 1080px) {
+  1920 × 1080
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1440px) 
+and (min-height: 1080px) and (max-height: 1080px) {
+  1440 × 1080
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) 
+and (min-height: 720px) and (max-height: 720px) {
+  1280 × 720
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 1176px) and (max-width: 1176px) 
+and (min-height: 664px) and (max-height: 664px) {
+  1176 × 664
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 2560px) and (max-width: 2560px) 
+and (min-height: 1400px) and (max-height: 1400px) {
+  2560 × 1400
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 1920px) 
+and (min-height: 1400px) and (max-height: 1400px) {
+  1920 × 1400
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 1920px) and (max-width: 1920px) 
+and (min-height: 1200px) and (max-height: 1200px) {
+  1920 × 1200
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 1680px) and (max-width: 1680px) 
+and (min-height: 1050px) and (max-height: 1050px) {
+  1680 × 1050
+  .header-title
+  {
+    font-size: clamp(1rem, 2rem, 3rem) !important;
+    top: 1.3%;
+    margin-top: 0.8rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-7vh) !important;
+    width: min(78vw, 88rem) !important;
+    height: clamp(12rem, 36vh, 26rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-5vh) !important;
+  }
+
+  .text-container
+  {
+    transform: translateY(-1vh) !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 0.8rem) !important;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1600px) 
+and (min-height: 1200px) and (max-height: 1200px) {
+  1600 × 1200
+  .header-title
+  {
+    font-size: 11rem !important;
+    top: 3.0%;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(99vw, 100vw) !important;
+    height: clamp(34rem, 46rem, 132rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -11.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 85rem) !important;
+    min-height: 18rem !important;
+    max-height: 24rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.65rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.65rem !important;
+    margin-bottom: 3px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1600px) 
+and (min-height: 1024px) and (max-height: 1024px) {
+  1600 × 1024
+  .header-title
+  {
+    font-size: 11rem !important;
+    top: 3.0%;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(99vw, 100vw) !important;
+    height: clamp(34rem, 46rem, 132rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -11.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 85rem) !important;
+    min-height: 18rem !important;
+    max-height: 24rem !important;
+    box-sizing: border-box !important;
+    margin: 0.15rem auto 0 !important;
+    position: relative !important;
+    top: -9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.65rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 8px 0 !important;
+    padding-left: 24px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.65rem !important;
+    margin-bottom: 3px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1600px) 
+and (min-height: 900px) and (max-height: 900px) {
+  1600 × 900
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-14vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -6.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 22rem !important;
+    max-height: 27rem !important;
+    box-sizing: border-box !important;
+    margin: 0.1rem auto 0 !important;
+    position: relative !important;
+    top: -1.9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1440px) 
+and (min-height: 900px) and (max-height: 900px) {
+  1440 × 900
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-14vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -6.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 22rem !important;
+    max-height: 27rem !important;
+    box-sizing: border-box !important;
+    margin: 0.1rem auto 0 !important;
+    position: relative !important;
+    top: -1.9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 1366px) and (max-width: 1366px) 
+and (min-height: 768px) and (max-height: 768px) {
+  1366 × 768
+  .header-title
+  {
+    font-size: 8rem !important;
+    top: 2.7%;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-14vh) !important;
+    width: min(80vw, 78rem) !important;
+    height: clamp(12rem, 32vh, 24rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: -6.0rem !important;
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(88vw, 82rem) !important;
+    min-height: 22rem !important;
+    max-height: 27rem !important;
+    box-sizing: border-box !important;
+    margin: 0.1rem auto 0 !important;
+    position: relative !important;
+    top: -1.9rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.60rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.60rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.5rem, 1.5vh, 1.5rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) 
+and (min-height: 1024px) and (max-height: 1024px) {
+  1280 × 1024
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) 
+and (min-height: 960px) and (max-height: 960px) {
+  1280 × 960
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) 
+and (min-height: 800px) and (max-height: 800px) {
+  1280 × 800
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1280px) 
+and (min-height: 768px) and (max-height: 768px) {
+  1280 × 768
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 1152px) and (max-width: 1152px) 
+and (min-height: 864px) and (max-height: 864px) {
+  1152 × 864
+  .header-title
+  {
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+    top: 2%;
+    margin-top: 1.9rem;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-17vh) !important;
+    width: min(90vw, 72rem) !important;
+    height: clamp(12rem, 42vh, 22rem) !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 15rem !important;
+    max-height: 15rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -3.10rem !important;
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+    font-size: clamp(3rem, 6rem, 9rem) !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container ul
+  {
+    list-style-type: disc !important;
+  }
+
+  .text-container ol
+  {
+    list-style-type: decimal !important;
+  }
+
+  .text-container li
+  {
+    font-size: 1.00rem !important;
+    margin-bottom: 4px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    bottom: clamp(0.5rem, 1.0vh, 1.2rem) !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1024px) 
+and (min-height: 768px) and (max-height: 768px) {
+  1024 × 768
+  .header-title
+  {
+    font-size: 5rem !important;
+    top: 1.5%;
+    margin-top: 0.6875rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    transform: translateY(-20vh) !important;
+    width: min(82vw, 70rem) !important;
+    height: clamp(20rem, 30vh, 42rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-15.5vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 72rem) !important;
+    min-height: 10rem !important;
+    max-height: 12rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-4vh) !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.75rem !important;
+  }
+
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 2vh, 2rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+COMMENTED OUT - END */

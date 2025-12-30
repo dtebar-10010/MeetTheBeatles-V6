@@ -1,0 +1,111 @@
+@font-face {
+ font-family : 'Bootle';
+ src         : url('../fonts/bootle-4b9l.ttf') format('truetype');
+ font-weight : normal;
+ font-style  : normal;
+}
+
+*, *:before, *:after {
+ box-sizing : border-box;
+}
+
+html, body {
+ min-height          : 100vh;
+ color               : #444;
+ margin              : 0;
+ padding             : 0;
+ background-size     : cover;
+ background-position : center;
+ font-family         : 'Bootle', sans-serif;
+ height              : 100vh;
+ display             : flex;
+ flex-direction      : column;
+ justify-content     : flex-end;
+ font-size           : 11px;
+ overflow-y          : hidden;
+ transition          : background-image 0.5s ease-in-out;
+}
+
+.row {
+ display   : flex;
+ flex-wrap : nowrap;
+}
+
+p {
+ font-family : 'Arial', sans-serif;
+}
+
+a {
+ text-decoration : none;
+}
+
+a.btn.btn-primary {
+ text-decoration : none;
+border: 2px solid whitesmoke;
+border-radius: 7px;
+
+   font-size: 9px;
+}
+
+.btn-primary {
+ color            : white;
+ background-color : black;
+ padding          : 2;
+ appearance       : none; /* Standard property */
+ -webkit-appearance : none; /* Chrome/Safari */
+ -moz-appearance  : none; /* Firefox */
+}
+
+.hide-initially {
+ display : none;
+}
+
+.show-initially {
+ display : block;
+}
+
+.hidden {
+ display : none;
+}
+
+footer {
+ width          : 100%;
+ margin         : 0 auto;
+ text-align     : left;
+ font-size      : 6px;
+ margin-bottom  : 0.01em;
+ margin-top     : 0.01em;
+ padding-left   : 0.82em;
+ padding-top    : 0;
+ padding-bottom : 0.67em;
+}
+
+footer a {
+ color           : white !important;
+ text-decoration : none;
+}
+
+.stacked-cards li.slide {
+ transition: border-color 0.5s ease-in-out;
+}
+
+.text-container {
+ transition: border-color 0.5s ease-in-out;
+}
+
+.header-title {
+margin: top 12px !important;
+}
+
+.overlay {
+  font-family: 'Bootle', sans-serif !important;
+  font-size: 10px !important;
+  /*position: fixed  !important;*/
+  margin: 0px;
+  padding: 0px;
+  top: 6px  !important;
+  left: 6px !important;
+  /*width: 100% !important;
+  height: 100% !important;*/
+}
+

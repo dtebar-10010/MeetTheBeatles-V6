@@ -1,0 +1,378 @@
+.text-container {
+ visibility       : visible;
+ height           : 133px !important;
+ max-height       : 133px !important;
+ border           : 5px solid transparent;
+ padding          : 8px 12px;
+ overflow-y       : scroll;
+ margin           : 0 auto;
+ background-color : rgba(220, 220, 220, 1.00);
+ color            : #333;
+ border-radius    : 11px;
+ position         : relative;
+ z-index          : 100;
+ margin-top       : 36px !important;
+ scrollbar-width  : thin; /* Firefox scrollbar */
+ scrollbar-color  : #888 #f1f1f1; /* Firefox scrollbar colors: thumb track */
+ transition       : max-height 0.3s ease;
+ display          : flex !important;
+ flex-direction   : column !important;
+ justify-content  : flex-start !important;
+ align-items      : flex-start !important;
+ box-shadow       : inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.text-container::-webkit-scrollbar {
+ width : 7px;
+}
+
+.text-container::-webkit-scrollbar-track {
+ background    : #f1f1f1;
+ border-radius : 10px;
+}
+
+.text-container::-webkit-scrollbar-thumb {
+ background    : #888;
+ border-radius : 10px;
+}
+
+.text-container::-webkit-scrollbar-thumb:hover {
+ background : #555;
+}
+
+.text-container.hidden {
+ display    : none;
+ visibility : hidden;
+}
+
+/* Style for all paragraphs */
+.text-container p {
+ margin         : 0 0 6px 0;
+ padding        : 0;
+ text-align     : left;
+ width          : 100%;
+ line-height    : 1.5;
+ font-family    : 'Arial', sans-serif;
+ font-size      : 12px !important;
+ letter-spacing : 0.3px;
+ font-weight    : bold !important;
+}
+
+/* Make the last paragraph not have a bottom margin */
+.text-container p:last-child {
+ margin-bottom : 0;
+}
+
+/* Style for the history entries */
+.history-entry {
+ margin-bottom  : 8px;
+ padding-bottom : 8px;
+ border-bottom  : 1px solid rgba(0, 0, 0, 0.1);
+ width          : 100%;
+}
+
+.history-entry:last-child {
+ border-bottom  : none;
+ margin-bottom  : 0;
+ padding-bottom : 0;
+}
+
+div.history-entry {
+ font-family : 'Arial', sans-serif !important;
+}
+
+/* CKEditor element styling */
+/* Headings */
+.history-entry h1,
+.history-entry h2,
+.history-entry h3,
+.history-entry h4,
+.history-entry h5,
+.history-entry h6 {
+ margin      : 8px 0 4px 0;
+ padding     : 0;
+ line-height : 1.2;
+ font-family : 'Arial', sans-serif;
+}
+
+.history-entry h1 {
+ font-size : 14px !important;
+}
+
+.history-entry h2 {
+ font-size : 13px !important;
+}
+
+.history-entry h3 {
+ font-size : 12px !important;
+}
+
+.history-entry h4,
+.history-entry h5,
+.history-entry h6 {
+ font-size : 11px !important;
+}
+
+/* Lists */
+.history-entry ul,
+.history-entry ol {
+ margin       : 4px 0 !important;
+ padding-left : 18px !important;
+ list-style-position: outside !important;
+}
+
+.history-entry ul {
+ list-style-type: disc !important;
+}
+
+.history-entry ol {
+ list-style-type: decimal !important;
+}
+
+.history-entry li {
+ font-size     : 12px !important;
+ margin-bottom : 2px !important;
+ list-style: inherit !important;
+ display: list-item !important;
+}
+
+/* Catch-all for any lists that might not be in history-entry */
+.text-container ul,
+.text-container ol {
+ list-style-position: outside !important;
+ margin: 4px 0 !important;
+ padding-left: 18px !important;
+}
+
+.text-container ul {
+ list-style-type: disc !important;
+}
+
+.text-container ol {
+ list-style-type: decimal !important;
+}
+
+.text-container li {
+ display: list-item !important;
+ list-style: inherit !important;
+}
+
+/* Blockquotes */
+.history-entry blockquote {
+ border-left  : 3px solid #999;
+ margin       : 6px 0;
+ padding-left : 10px;
+ font-style   : italic;
+ font-size    : 12px !important;
+}
+
+/* Links */
+.history-entry a {
+ color           : #0066cc;
+ text-decoration : underline;
+}
+
+.history-entry a:hover {
+ text-decoration : none;
+}
+
+/* Tables */
+.history-entry table {
+ border-collapse : collapse;
+ width           : 100%;
+ margin          : 6px 0;
+ font-size       : 12px !important;
+}
+
+.history-entry th,
+.history-entry td {
+ border     : 1px solid #ddd;
+ padding    : 2px 4px;
+ text-align : left;
+}
+
+.history-entry th {
+ background-color : rgba(0, 0, 0, 0.1);
+}
+
+/* Images */
+.history-entry img {
+ max-width : 100%;
+ height    : auto;
+ margin    : 4px 0;
+}
+
+/* CKEditor font styles */
+.history-entry .text-tiny {
+ font-size : 9px !important;
+}
+
+.history-entry .text-small {
+ font-size : 10px !important;
+}
+
+.history-entry .text-big {
+ font-size : 12px !important;
+}
+
+.history-entry .text-huge {
+ font-size : 13px !important;
+}
+
+/* Text alignment */
+.history-entry .text-center {
+ text-align : center;
+}
+
+.history-entry .text-right {
+ text-align : right;
+}
+
+.history-entry .text-justify {
+ text-align : justify;
+}
+
+/* Different colors for different phases */
+.phase-01 .text-container {
+ background-color : rgba(50, 50, 50, 0.8);
+ color            : #fff;
+}
+
+.phase-01 .text-container a {
+ color : #88ccff;
+}
+
+.phase-01 .history-entry .beatle-name {
+ color : #cccccc;
+}
+
+.phase-01 .history-entry .year {
+ color : #aaaaaa;
+}
+
+.phase-02 .text-container {
+ background-color : rgba(30, 30, 90, 0.8);
+ color            : #fff;
+}
+
+.phase-02 .text-container a {
+ color : #aaddff;
+}
+
+.phase-02 .history-entry .beatle-name {
+ color : #ddddff;
+}
+
+.phase-02 .history-entry .year {
+ color : #aaaadd;
+}
+
+.phase-03 .text-container {
+ background-color : rgba(70, 30, 70, 0.8);
+ color            : #fff;
+}
+
+.phase-03 .text-container a {
+ color : #ffaadd;
+}
+
+.phase-03 .history-entry .beatle-name {
+ color : #ffddff;
+}
+
+.phase-03 .history-entry .year {
+ color : #ddaadd;
+}
+
+.phase-04 .text-container {
+ background-color : rgba(120, 120, 120, 0.8);
+ color            : #fff;
+}
+
+.phase-04 .text-container a {
+ color : #ffffff;
+}
+
+.phase-04 .history-entry .beatle-name {
+ color : #eeeeee;
+}
+
+.phase-04 .history-entry .year {
+ color : #cccccc;
+}
+
+.phase-05 .text-container {
+ background-color : rgba(230, 230, 230, 0.8);
+ color            : #000;
+}
+
+.phase-05 .text-container a {
+ color : #0055aa;
+}
+
+.phase-05 .history-entry .beatle-name {
+ color : #222222;
+}
+
+.phase-05 .history-entry .year {
+ color : #444444;
+}
+
+/* Custom styles for Beatles content */
+.band-name {
+ font-weight : bold;
+ color       : #d32f2f !important;
+ display     : inline !important;
+}
+
+.beatle-name {
+ font-weight : bold;
+ color       : #1976d2 !important;
+ display     : inline !important;
+}
+
+.year {
+ font-weight : bold;
+ color       : #388e3c !important;
+ display     : inline !important;
+}
+
+/* Style for quotes */
+.quote {
+ font-style   : italic;
+ padding-left : 10px;
+ border-left  : 2px solid #999;
+ margin       : 4px 0;
+ display      : block;
+}
+
+.album-name {
+ font-weight     : bold !important;
+ text-decoration : underline !important;
+ display         : inline !important;
+ font-style      : italic;
+}
+
+/* Ensure these elements display properly */
+.beatles-enhanced p,
+.beatles-enhanced div,
+.beatles-enhanced span {
+ display       : block;
+ margin-bottom : 1em;
+}
+
+.beatles-enhanced span.band-name,
+.beatles-enhanced span.beatle-name,
+.beatles-enhanced span.year,
+.beatles-enhanced span.quote,
+.beatles-enhanced span.album-name {
+ display : inline !important;
+}
+
+/*.history-entry p{
+  font-size: 0.70rem !important;
+}*/
+
+span{
+  font-size: 1.00rem !important;
+}

@@ -1,0 +1,1124 @@
+/*
+Mobile-first: mediaQueries-v6.
+
+- Replaced px and % with rem, clamp(), vw, vh, min()/max(). 
+- Improved accessibility, predictable scaling, and consistency.
+*/
+
+/* ---------------------------------------
+   General fallback small → large.
+   Applies across most phones and tablets.
+   --------------------------------------- */
+@media (min-width: 220px) and (max-width: 1368px)
+{
+  body
+  {
+    overflow-x: hidden;
+  }
+
+  /* stacked cards - gap & video fallback */
+  .stacked-cards li
+  {
+    width: 50% !important;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .stacked-cards li video
+  {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Phase buttons - general fallback */
+  #phase-selection-container .btn-group
+  {
+    gap: 0.3125rem; /* 5px */
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    min-height: 2rem; /* replaces fixed height 25px */
+    font-size: 0.75rem; /* ~12px */
+    padding: 0.35rem 0.5rem;
+  }
+
+  /* overlay text compactness */
+  .overlay
+  {
+    padding: 0.125rem 0.25rem; /* 2px 4px */
+    font-size: 0.75rem !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  footer a
+  {
+    position: relative !important;
+    bottom: 1rem !important; /* 16px */
+  }
+}
+
+@media (min-width: 220px) and (max-width: 319px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 3rem, 4rem) !important;
+    top: 1.5%;
+    margin-top: 0.4375rem; /* 7px */
+  }
+  .stacked-cards
+  {
+    width: min(80vw, 24rem) !important;
+    box-sizing: border-box;
+    margin: 0 auto !important;
+    height: clamp(12rem, 50vh, 30rem) !important;
+    margin-bottom: 0.1875rem !important; /* 3px */
+    transform: translateY(-13vh) !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    min-width: 3.75rem; /* ~60px */
+    min-height: 0.71rem; /* ~22px */
+    height: 0.71rem !important;
+    font-size: 0.50rem !important; 
+    padding: 0.05rem 0.02rem !important;
+    transform: translateY(-17vh) !important;
+  }
+
+  .text-container
+  {
+    max-height: clamp(5rem, 20vh, 12rem) !important; /* replaces 20% */
+    min-height: 5rem !important; /* ~80px */
+    width: min(90vw, 44rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important; /* 5px */
+    transform: translateY(-2vh) !important;
+    font-size: 0.15rem !important
+  }
+
+  .text-container p
+  {
+    font-size: 0.15rem !important; /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.15rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    padding-top: 11px !important;
+    padding-bottom: 0px !important;
+    bottom: clamp(0.03rem, 0.01vw, 0.11rem) !important;
+    z-index: 100;
+  }
+}
+
+
+
+@media (min-width: 320px) and (max-width: 344px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 3rem, 4rem) !important;
+    top: 1.5%;
+    margin-top: 0.4375rem; /* 7px */
+  }
+  .stacked-cards
+  {
+    width: min(80vw, 24rem) !important;
+    box-sizing: border-box;
+    margin: 0 auto !important;
+    height: clamp(12rem, 50vh, 30rem) !important;
+    margin-bottom: 0.1875rem !important; /* 3px */
+    transform: translateY(-13vh) !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    min-width: 3.75rem; /* ~60px */
+    min-height: 0.71rem; /* ~22px */
+    height: 0.71rem !important;
+    font-size: 0.50rem !important; 
+    padding: 0.05rem 0.02rem !important;
+    transform: translateY(-17vh) !important;
+  }
+
+  .text-container
+  {
+    max-height: clamp(5rem, 20vh, 12rem) !important; /* replaces 20% */
+    min-height: 5rem !important; /* ~80px */
+    width: min(90vw, 44rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important; /* 5px */
+    transform: translateY(-2vh) !important;
+    font-size: 0.15rem !important
+  }
+
+  .text-container p
+  {
+    font-size: 0.15rem !important; /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.15rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    padding-top: 11px !important;
+    padding-bottom: 0px !important;
+    bottom: clamp(0.03rem, 0.01vw, 0.11rem) !important;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 345px) and (max-width: 415px)
+{
+  .header-title
+  {
+    font-size: clamp(1.25rem, 2rem, 3rem) !important;
+    margin-top: 0.3rem;
+  }
+
+  .stacked-cards
+  {
+    width: min(90vw, 44rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    height: clamp(12rem, 50vh, 30rem) !important;
+    margin-bottom: 0.1875rem !important; /* 3px */
+    transform: translateY(-23vh) !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-22vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(100vw, 155rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    max-height: 9.00rem !important; 
+    transform: translateY(-11vh) !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.8rem, 1.0rem, 2.0rem) !important;
+    bottom: clamp(0.08rem, 0.17rem, 0.19rem) !important;
+    z-index: 100;
+  }
+}
+
+@media (min-width: 412px) and (max-width: 412px) 
+  and (min-height: 891px) and (max-height: 891px)
+{
+  .header-title
+  {
+    font-size: clamp(2.25rem, 6.00rem, 13.00rem) !important;
+    margin-top: 0.7rem;
+  }
+
+  .stacked-cards
+  {
+    width: min(90vw, 44rem) !important;
+    height: clamp(12rem, 50vh, 30rem) !important;
+    transform: translateY(23vh) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-33vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 44rem) !important;
+    max-height: 11.5625rem !important; /* ~137px */
+    transform: translateY(-23vh) !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 819px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 3vw, 2.25rem) !important;
+    top: 1.5%;
+    margin-top: 0.4375rem; /* 7px */
+  }
+
+  .stacked-cards
+  {
+    width: min(90vw, 64rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    height: clamp(12rem, 33vh, 24rem) !important; /* replaces 33vh */
+    margin-bottom: 0.1875rem !important;
+    transform: translateY(-29vh) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-9.9vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(81vw, 60rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.1875rem auto 0 !important;
+    height: clamp(14rem, 27vh, 17rem) !important; /* ~277px */
+    max-height: clamp(14rem, 27vh, 17rem) !important;
+    transform: translateY(-2vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.75rem !important; /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.8rem, 1.0rem, 2.0rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+
+
+@media (min-width: 416px) and (max-width: 599px)
+{
+  .header-title
+  {
+    font-size: clamp(1.25rem, 6vw, 3rem) !important;
+    margin-top: 0.7rem;
+  }
+
+  .stacked-cards
+  {
+    width: min(90vw, 44rem) !important;
+    height: clamp(12rem, 50vh, 30rem) !important;
+    transform: translateY(-23vh) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-33vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 44rem) !important;
+    max-height: 11.5625rem !important; /* ~137px */
+    transform: translateY(-23vh) !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 819px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 3vw, 2.25rem) !important;
+    top: 1.5%;
+    margin-top: 0.4375rem; /* 7px */
+  }
+
+  .stacked-cards
+  {
+    width: min(90vw, 64rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    height: clamp(12rem, 33vh, 24rem) !important; /* replaces 33vh */
+    margin-bottom: 0.1875rem !important;
+    transform: translateY(-29vh) !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-9.9vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(81vw, 60rem) !important;
+    box-sizing: border-box !important;
+    margin: 0.1875rem auto 0 !important;
+    height: clamp(14rem, 27vh, 17rem) !important; /* ~277px */
+    max-height: clamp(14rem, 27vh, 17rem) !important;
+    transform: translateY(-2vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.75rem !important; /* ~12px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.75rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.8rem, 1.0rem, 2.0rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+
+/* Narrow mid-range small button compact case. */
+@media (min-width: 820px) and (max-width: 840px)
+{
+  .stacked-cards
+  {
+    transform: translateY(-11vh) !important;
+    width: min(90vw, 64rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+  #phase-selection-container .btn-group .btn
+  {
+    min-height: 1.125rem !important; /* ~18px */
+    font-size: 1.5625rem !important; /* ~9px */
+    padding: 0.15rem 0.2rem !important;
+    transform: translateY(-21vh) !important;
+
+  }
+  .text-container
+  {
+    width: min(90vw, 64rem) !important;
+    min-height: 11.5625rem !important; /* ~137px */
+    max-height: 11.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-11vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important; /* ~11px */
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+
+/* Wide phone / small laptop tight range. */
+@media (min-width: 896px) and (max-width: 915px)
+{
+  .header-title
+  {
+    font-size: clamp(4.00rem, 4.50rem, 5.00rem) !important;
+    top: 1.7%;
+    margin-top: 0.4375rem; /* 7px */
+  }
+  .stacked-cards
+  {
+    transform: translateY(-21vh) !important;
+    width: min(90vw, 64rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+  #phase-selection-container .btn-group .btn
+  {
+    min-height: 1.125rem !important; /* ~18px */
+    font-size: 1.5625rem !important; /* ~9px */
+    padding: 0.15rem 0.2rem !important;
+    transform: translateY(-21vh) !important;
+
+  }
+  .text-container
+  {
+    width: min(94vw, 75rem) !important;
+    min-height: 21.5625rem !important; /* ~137px */
+    max-height: 21.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-11vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important; /* ~11px */
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+
+/* Landscape tablet / small desktop. */
+@media (min-width: 916px) and (max-width: 1023px)
+{
+  .header-title
+  {
+    font-size: clamp(1rem, 3vw, 2.25rem) !important;
+    top: 1.5%;
+    margin-top: 0.6875rem; /* 11px */
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-11vh) !important;
+    width: min(90vw, 64rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-11vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 64rem) !important;
+    min-height: 8.5625rem !important; /* ~137px */
+    max-height: 8.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-9vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important; /* ~11px */
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+
+/* Desktop range (1024–1199px) */
+@media (min-width: 1024px) and (max-width: 1199px)
+{
+  .header-title
+  {
+    font-size: clamp(3.00rem, 4.00rem, 4.25rem) !important;
+    top: 1.5%;
+    margin-top: 0.6875rem; /* 11px */
+  }
+
+  .stacked-cards
+  {
+    transform: translateY(-21vh) !important;
+    width: min(90vw, 72rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    transform: translateX(-50%) translateY(-15vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 72rem) !important;
+    min-height: 8.5625rem !important;
+    max-height: 8.5625rem !important;
+    box-sizing: border-box !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-9vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.6875rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    padding-left: 0.6875rem !important; /* 11px */
+    z-index: 100;
+  }
+}
+
+/* Large desktop (1200px+) */
+@media (min-width: 1200px)
+{
+  .header-title
+  {
+    font-size: clamp(3rem, 3rem, 3rem) !important;
+    top: 1.2%;
+    margin-top: 0.5rem; 
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    /*transform: translateY(-51vh) !important;*/
+    width: min(78vw, 88rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    height: clamp(4rem, 8rem, 9rem) !important;
+  }
+
+  #phase-selection-container
+  {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    left: 50% !important;
+    position: relative !important;
+    top: 3.00rem !important; 
+    transform: translateX(-50%) !important;
+    z-index: 101 !important;
+  }
+
+  .text-container
+  {
+    width: min(91vw, 80rem) !important;
+    min-height: 16rem !important; 
+    max-height: 16rem !important;
+    box-sizing: border-box !important;
+    margin: 0.10rem auto 0 !important;
+    position: relative !important;
+    top: -0.10rem !important; 
+    transform: translateX(0%) !important;
+    z-index: 100 !important;
+    overflow-y: auto !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.50rem !important; 
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.50rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 1vw, 3rem) !important;
+    bottom: clamp(0.20rem, 1.0vh, 1.00rem) !important;
+    padding-left: 0.6875rem !important;
+    z-index: 100;
+  }
+}
+
+/* Very tall narrow devices (portrait phablets). */
+@media (min-width: 820px) and (max-width: 860px) and (min-height: 820px)
+{
+  .stacked-cards
+  {
+    transform: translateY(-30vh) !important; /* replaced -75% with vh-based offset */
+  }
+
+  .text-container
+  {
+    max-height: 11.25rem !important; /* 180px */
+    min-height: 11.25rem !important;
+    width: min(90vw, 64rem) !important;
+    padding: 0.3125rem;
+    margin-top: 1.25rem !important; /* 20px */
+  }
+
+  .text-container p
+  {
+    font-size: 0.5625rem !important; /* ~9px */
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.5625rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+}
+
+/* Short vertical real-estate cases -> reduce text height and font size */
+@media (max-height: 440px) and (min-width: 860px)
+{
+  .text-container
+  {
+    max-height: 5rem !important; /* ~80px */
+    min-height: 5rem !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.5rem !important; /* ~8px */
+    font-weight: 300 !important;
+  }
+
+  /* Ensure CKEditor list bullets/numbers are visible */
+  .text-container ul,
+  .text-container ol
+  {
+    margin: 6px 0 !important;
+    padding-left: 20px !important;
+    list-style-position: outside !important;
+  }
+
+  .text-container li
+  {
+    font-size: 0.5rem !important;
+    margin-bottom: 2px !important;
+    list-style: inherit !important;
+  }
+
+  footer
+  {
+    left: 0.6875rem !important; /* 11px */
+    bottom: 0.6875rem !important;
+    z-index: 999 !important;
+  }
+}
+
+@media (min-width: 916px) and (max-width: 1023px) 
+and (min-height: 800px)and (max-height: 800px)
+{
+  .header-title
+  {
+    font-size: clamp(5rem, 6rem, 7rem) !important;
+    top: 1.5%;
+    margin-top: 0.6875rem; /* 11px */
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    /*transform: translateY(-50vh) !important;*/
+    width: min(90vw, 64rem) !important;
+    height: clamp(12rem, 40vh, 28rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    top: -14rem !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(-24vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 64rem) !important;
+    min-height: 17.5625rem !important; /* ~137px */
+    max-height: 28.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-9vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important; /* ~11px */
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+
+/* COMMENTED OUT: Narrower 820-840 × 800h query superseded by broader 820-915 × 800h below
+@media (min-width: 820px) and (max-width: 840px) 
+and (min-height: 800px)and (max-height: 800px)
+{
+  .header-title
+  {
+    font-size: clamp(5rem, 6rem, 7rem) !important;
+    top: 1.5%;
+    margin-top: 0.6875rem;
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    width: min(90vw, 64rem) !important;
+    height: clamp(12rem, 40vh, 28rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    top: -14rem !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(0.90vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 64rem) !important;
+    min-height: 17.5625rem !important;
+    max-height: 28.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-9vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important;
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+END COMMENTED OUT */
+
+@media (min-width: 820px) and (max-width: 915px) 
+and (min-height: 800px)and (max-height: 800px)
+{
+  .header-title
+  {
+    font-size: clamp(5rem, 6rem, 7rem) !important;
+    top: 1.5%;
+    margin-top: 0.6875rem; /* 11px */
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    /*transform: translateY(-50vh) !important;*/
+    width: min(90vw, 64rem) !important;
+    height: clamp(12rem, 40vh, 28rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    top: -14rem !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(0.90vh) !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    min-height: 1.125rem !important; /* ~18px */
+    font-size: 1.5625rem !important; /* ~9px */
+    padding: 0.15rem 0.2rem !important;
+    transform: translateY(-21vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 64rem) !important;
+    min-height: 17.5625rem !important; /* ~137px */
+    max-height: 28.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-9vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important; /* ~11px */
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+
+
+@media (min-width: 801px) and (max-width: 819px) 
+and (min-height: 800px)and (max-height: 800px)
+{
+  .header-title
+  {
+    font-size: clamp(5rem, 6rem, 7rem) !important;
+    top: 1.5%;
+    margin-top: 0.6875rem; /* 11px */
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    /*transform: translateY(-50vh) !important;*/
+    width: min(90vw, 64rem) !important;
+    height: clamp(12rem, 40vh, 28rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    top: -14rem !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(0.90vh) !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    min-height: 1.125rem !important; /* ~18px */
+    font-size: 1.5625rem !important; /* ~9px */
+    padding: 0.15rem 0.2rem !important;
+    transform: translateY(-21vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 64rem) !important;
+    min-height: 17.5625rem !important; /* ~137px */
+    max-height: 28.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-9vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important; /* ~11px */
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+@media (min-width: 600px) and (max-width: 610px) 
+and (min-height: 800px)and (max-height: 800px)
+{
+  .header-title
+  {
+    font-size: clamp(5rem, 6rem, 7rem) !important;
+    top: 1.5%;
+    margin-top: 0.6875rem; /* 11px */
+  }
+
+  .stacked-cards
+  {
+    position: relative !important;
+    /*transform: translateY(-50vh) !important;*/
+    width: min(90vw, 64rem) !important;
+    height: clamp(12rem, 40vh, 28rem) !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
+    top: 9rem !important;
+  }
+
+  #phase-selection-container
+  {
+    transform: translateX(-50%) translateY(0.90vh) !important;
+  }
+
+  #phase-selection-container .btn-group .btn
+  {
+    min-height: 1.125rem !important; /* ~18px */
+    font-size: 1.5625rem !important; /* ~9px */
+    padding: 0.15rem 0.2rem !important;
+    transform: translateY(-21vh) !important;
+  }
+
+  .text-container
+  {
+    width: min(90vw, 64rem) !important;
+    min-height: 17.5625rem !important; /* ~137px */
+    max-height: 28.5625rem !important;
+    margin: 0.3125rem auto 0 !important;
+    transform: translateY(-3vh) !important;
+  }
+
+  .text-container p
+  {
+    font-size: 0.6875rem !important; /* ~11px */
+  }
+
+  footer
+  {
+    position: fixed !important;
+    left: clamp(0.5rem, 3vw, 3rem) !important;
+    bottom: clamp(0.5rem, 3vw, 3rem) !important;
+    z-index: 100;
+  }
+}
+/* EOF */

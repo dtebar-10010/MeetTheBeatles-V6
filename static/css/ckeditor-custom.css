@@ -1,0 +1,156 @@
+/* Styling for the CKEditor Admin content area */
+:root {
+  --ck-font-size-base: 11px;
+  --ck-line-height-base: 1.5;
+}
+
+/* Base styles for all content */
+.ck-content {
+  color: #000000 !important;
+  background-color: #ffffff;
+}
+
+.ck-content p {
+  margin: 0 0 6px 0;
+  font-size: 11px !important;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+}
+
+.ck-content blockquote {
+  border-left: 3px solid #ccc;
+  margin-left: 5px;
+  padding-left: 8px;
+  font-style: italic;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #000000;
+}
+
+/* Headings */
+.ck-content h1,
+.ck-content h2,
+.ck-content h3,
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 {
+  margin: 8px 0 4px 0;
+  padding: 0;
+  line-height: 1.2;
+  font-family: 'Arial', sans-serif;
+  color: #000000;
+}
+
+.ck-content h1 { font-size: 14px !important; }
+.ck-content h2 { font-size: 13px !important; }
+.ck-content h3 { font-size: 12px !important; }
+.ck-content h4,
+.ck-content h5,
+.ck-content h6 { font-size: 11px !important; }
+
+/* Lists */
+.ck-content ul,
+.ck-content ol {
+  margin: 4px 0 !important;
+  padding-left: 18px !important;
+  color: #000000 !important;
+  list-style-position: outside !important;
+}
+
+.ck-content ul {
+  list-style-type: disc !important;
+}
+
+.ck-content ol {
+  list-style-type: decimal !important;
+}
+
+.ck-content li {
+  font-size: 11px !important;
+  margin-bottom: 2px;
+  color: #000000 !important;
+  display: list-item !important;
+}
+
+/* Links */
+.ck-content a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+/* Tables */
+.ck-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 6px 0;
+  font-size: 10px !important;
+  color: #000000;
+}
+
+.ck-content th,
+.ck-content td {
+  border: 1px solid #ddd;
+  padding: 2px 4px;
+  text-align: left;
+  color: #000000;
+}
+
+.ck-content th {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #000000;
+}
+
+/* Images */
+.ck-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 4px 0;
+}
+
+/* CKEditor font styles */
+.ck-content .text-tiny { font-size: 9px !important; color: #000000; }
+.ck-content .text-small { font-size: 10px !important; color: #000000; }
+.ck-content .text-big { font-size: 12px !important; color: #000000; }
+.ck-content .text-huge { font-size: 13px !important; color: #000000; }
+
+/* Text alignment */
+.ck-content .text-center { text-align: center; }
+.ck-content .text-right { text-align: right; }
+.ck-content .text-justify { text-align: justify; }
+
+/* Custom Beatles classes for editing */
+.ck-content .band-name {
+  font-weight: bold;
+  color: #000000;
+}
+
+.ck-content .album-name {
+  font-style: italic;
+  color: #000000;
+}
+
+.ck-content .year {
+  font-weight: bold;
+  color: #444444;
+}
+
+.ck-content .beatle-name {
+  font-weight: bold;
+  color: #222222;
+}
+
+.ck-content .quote {
+  font-style: italic;
+  padding-left: 10px;
+  border-left: 2px solid #999;
+  margin: 4px 0;
+  display: block;
+  color: #000000;
+}
+
+/* Ensure editor UI has good contrast */
+.ck.ck-editor__editable {
+  background-color: white !important;
+  color: black !important;
+}

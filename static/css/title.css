@@ -1,0 +1,13 @@
+.header-title {
+ position      : absolute;
+ top           : 2%;
+ left          : 50%;
+ transform     : translateX(-50%);
+ color         : white;
+  font-family   : 'Bootle', sans-serif;
+ font-size     : 4.3vw !important;
+ text-align    : center;
+ width         : 100%;
+ margin-bottom : 12px !important;
+ text-shadow   : 2px 2px 4px rgba(0, 0, 0, 0.5), -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
