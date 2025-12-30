@@ -256,3 +256,7 @@ try:
     SECURE_HSTS_SECONDS = int(os.environ.get('SECURE_HSTS_SECONDS', '0'))
 except ValueError:
     SECURE_HSTS_SECONDS = 0
+
+# Additional HSTS settings configurable via environment variables
+SECURE_HSTS_INCLUDE_SUBDOMAINS = _bool_env('SECURE_HSTS_INCLUDE_SUBDOMAINS', False)
+SECURE_HSTS_PRELOAD = _bool_env('SECURE_HSTS_PRELOAD', False)
