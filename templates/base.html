@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Meet The Beatles — a fan site showcasing eras, media, history and interactive features.">
+    <meta name="keywords"
+          content="The Beatles, music, history, fan site, albums, band members, eras">
+    <title>Meet The Beatles!</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+          crossorigin="anonymous">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/title.css' %}" rel="stylesheet">
+    <link href="{% static 'css/stackedCards.css' %}" rel="stylesheet">
+    <link href="{% static 'css/phaseMenu.css' %}" rel="stylesheet">
+    <link href="{% static 'css/historyContainer.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mediaQueries-v6.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mediaQueries-v6-landscape.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mediaQueries-v6-laptops.css' %}" rel="stylesheet" >
+    <link rel="icon"
+          type="image/x-icon"
+          href="{% static 'imgs/icons/favicon.ico' %}">
+    <link rel="icon"
+          type="image/png"
+          href="{% static 'imgs/icons/favicon.png' %}">
+    <link rel="apple-touch-icon" href="{% static 'imgs/icons/favicon.png' %}">
+    <!-- Firefox-specific CSS loader - only loads firefox-fixes.css in Firefox -->
+    <script src="{% static 'js/firefox-loader.js' %}"></script>
+    <!-- DEBUG: current_phase = {{ current_phase }} -->
+    <style>
+      @font-face {
+        font-family: 'Bootle';
+        src: url("{% static 'fonts/Bootle-4B9l.woff2' %}") format('woff2'),
+        url("{% static 'fonts/Bootle-4B9l.woff' %}") format('woff'),
+        url("{% static 'fonts/Bootle-4B9l.ttf' %}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        {% if current_phase == '01' %}
+        background-image: url('/media/01/first_era-background.jpg');
+        {% elif current_phase == '02' %}
+        background-image: url('/media/02/second_era-background.jpg');
+        {% elif current_phase == '03' %}
+        background-image: url('/media/03/third_era-background.jpg');
+        {% elif current_phase == '04' %}
+        background-image: url('/media/04/fourth_era-background.jpg');
+        {% elif current_phase == '05' %}
+        background-image: url('/media/05/fifth_era-background.jpg');
+        {% endif %}
+      }
+
+      .stacked-cards li.slide {
+        {% if current_phase == '01' %}
+        background-color: black;
+        {% elif current_phase == '02' %}
+        background-color: navy;
+        {% elif current_phase == '03' %}
+        background-color: purple;
+        {% elif current_phase == '04' %}
+        background-color: gray;
+        {% elif current_phase == '05' %}
+        background-color: white;
+        {% endif %}
+      }
+    </style>
+    {% block head %}
+    {% endblock head %}
+  </head>
+  <body data-phase="{{ current_phase }}">
+    {% block content %}
+    {% endblock content %}
+    <footer>
+      <a href="https://dtebar.pythonanywhere.com" target="_blank">Tebar Software</a>
+    </footer>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js'></script>
+    <script src="{% static 'js/stackedCards.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    //<script src="{% static 'js/firefox-phase-btn-width-fix.js' %}"></script>
+    {% block footer %}
+    {% endblock footer %}
+  </body>
+</html>

@@ -1,0 +1,79 @@
+0000000000000000000000000000000000000000 e09fc9f8b7e96e9ecaf1847e6bc2df6120c66e7b dtebar <dtebar@gmail.com> 1763448228 -0500	commit (initial): Initial commit: Multi-timeframe backtesting framework
+e09fc9f8b7e96e9ecaf1847e6bc2df6120c66e7b 0000000000000000000000000000000000000000 dtebar <dtebar@gmail.com> 1763448231 -0500	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 e09fc9f8b7e96e9ecaf1847e6bc2df6120c66e7b dtebar <dtebar@gmail.com> 1763448231 -0500	Branch: renamed refs/heads/master to refs/heads/main
+e09fc9f8b7e96e9ecaf1847e6bc2df6120c66e7b 64b7a4baf0bf263f54becbfa6f60088f13a98b43 dtebar <dtebar@gmail.com> 1763449023 -0500	commit: Initial commit: Django Meet The Beatles App
+64b7a4baf0bf263f54becbfa6f60088f13a98b43 0000000000000000000000000000000000000000 dtebar <dtebar@gmail.com> 1763449101 -0500	Branch: renamed refs/heads/main to refs/heads/main
+64b7a4baf0bf263f54becbfa6f60088f13a98b43 64b7a4baf0bf263f54becbfa6f60088f13a98b43 dtebar <dtebar@gmail.com> 1763449101 -0500	Branch: renamed refs/heads/main to refs/heads/main
+64b7a4baf0bf263f54becbfa6f60088f13a98b43 8b4ecc8f5cb2f54a9b5b6980ce1a171df4d23e58 dtebar <dtebar@gmail.com> 1763484041 -0500	commit: Overlay song title font size reduced.
+8b4ecc8f5cb2f54a9b5b6980ce1a171df4d23e58 0ea8a37f8933802d1ce1c58ec8beaaffec62573c dtebar <dtebar@gmail.com> 1763489062 -0500	commit: auto-commit
+0ea8a37f8933802d1ce1c58ec8beaaffec62573c fcc5ba5df2ec48efa8b4d339fbb2b5215802c241 dtebar <dtebar@gmail.com> 1763500630 -0500	commit: auto-commit
+fcc5ba5df2ec48efa8b4d339fbb2b5215802c241 64971c50a78556e1bd68e35fb6efc8f57367ad9c dtebar <dtebar@gmail.com> 1764741958 -0500	commit: fixed favicon issue.
+64971c50a78556e1bd68e35fb6efc8f57367ad9c 030df9715f08b7168134d7fb83849c6bb67ea7d9 dtebar <dtebar@gmail.com> 1764742377 -0500	commit: Fix favicon display in Chrome - add .ico format and root URL redirect
+030df9715f08b7168134d7fb83849c6bb67ea7d9 12ce3e0c33f01c4a368da9664151169c22612360 dtebar <dtebar@gmail.com> 1764931623 -0500	commit: phase backgrouns change fix; edited media js to
+12ce3e0c33f01c4a368da9664151169c22612360 aa1fa3091e1241886bc20e15718dbc4239d9f9e1 dtebar <dtebar@gmail.com> 1764940123 -0500	commit: auto-commit
+aa1fa3091e1241886bc20e15718dbc4239d9f9e1 fa744d0324de2571f6b986fe000c48cc7fe847a6 dtebar <dtebar@gmail.com> 1765015963 -0500	commit: media queries adjustments.
+fa744d0324de2571f6b986fe000c48cc7fe847a6 dabe85d3b7b3aae1a067d0665d204f3c7ef95596 dtebar <dtebar@gmail.com> 1765027105 -0500	commit: auto-commit
+dabe85d3b7b3aae1a067d0665d204f3c7ef95596 691ab3888ac3cb09c542c0514e0309f2201f8931 dtebar <dtebar@gmail.com> 1765092133 -0500	commit: more media queries position adjustments.
+691ab3888ac3cb09c542c0514e0309f2201f8931 9f41b0459ecacc60243d5e264f654960621f22e5 dtebar <dtebar@gmail.com> 1765100418 -0500	commit: auto-commit
+9f41b0459ecacc60243d5e264f654960621f22e5 ba891eae6fe5a55d6cbe5a7cf3d9ab6c8209070f dtebar <dtebar@gmail.com> 1765114860 -0500	commit: auto-commit
+ba891eae6fe5a55d6cbe5a7cf3d9ab6c8209070f d5f32b081d34b6c0eda2d9e69baaa4be58512f71 dtebar <dtebar@gmail.com> 1765178275 -0500	commit: firefoc | chrome detection --for css/media queries and font.
+d5f32b081d34b6c0eda2d9e69baaa4be58512f71 220fb7f89e23a1f505c3f8eaf88cbe7a102aef98 dtebar <dtebar@gmail.com> 1765300811 -0500	commit: auto-commit
+220fb7f89e23a1f505c3f8eaf88cbe7a102aef98 1883e30d2886987fab7d3616248bc64f88c578d6 dtebar <dtebar@gmail.com> 1765346999 -0500	commit: auto-commit
+1883e30d2886987fab7d3616248bc64f88c578d6 a0e08d8fe620ae0d40d4790b475327ed49cdde57 dtebar <dtebar@gmail.com> 1765353840 -0500	commit: media q for galaxy z fold 5.
+a0e08d8fe620ae0d40d4790b475327ed49cdde57 3f05d759a03cde820d9653502591c9ba080d8db4 dtebar <dtebar@gmail.com> 1765370928 -0500	commit: mediaQueries.
+3f05d759a03cde820d9653502591c9ba080d8db4 51ecaa6f0ba27da9ae0e52832fe79226de815c8f dtebar <dtebar@gmail.com> 1765377905 -0500	commit: auto-commit
+51ecaa6f0ba27da9ae0e52832fe79226de815c8f a872737f3804d6668f6b6be29b05334901534dc9 dtebar <dtebar@gmail.com> 1765444726 -0500	commit: auto-commit
+a872737f3804d6668f6b6be29b05334901534dc9 084df9fa63e3431978bc9ae85cd5df218d265a60 dtebar <dtebar@gmail.com> 1765526400 -0500	commit: added prettier for django formatter.
+084df9fa63e3431978bc9ae85cd5df218d265a60 742bde3d6fa7aad4bd62c46ca7a475bb71555282 dtebar <dtebar@gmail.com> 1765531081 -0500	commit: auto-commit
+742bde3d6fa7aad4bd62c46ca7a475bb71555282 740019d53bd45567ddc675f05ed1b6d5526b4a58 dtebar <dtebar@gmail.com> 1765689674 -0500	commit: auto-commit
+740019d53bd45567ddc675f05ed1b6d5526b4a58 b6929e214f1f843c7fb1f4abd81ed88323ecab24 dtebar <dtebar@gmail.com> 1765700037 -0500	commit: auto-commit
+b6929e214f1f843c7fb1f4abd81ed88323ecab24 960cb229cc2abee82ec2dea4809b3e676b9c9ea1 dtebar <dtebar@gmail.com> 1766081881 -0500	commit: auto-commit
+960cb229cc2abee82ec2dea4809b3e676b9c9ea1 4ce6a0f74176b15371f45e35639316e0d0b6d10f dtebar <dtebar@gmail.com> 1766164073 -0500	commit: auto-commit
+4ce6a0f74176b15371f45e35639316e0d0b6d10f 55bbea7ccbdbfec7bae69cd61c6ca6c7067f8a9c dtebar <dtebar@gmail.com> 1766248852 -0500	commit: auto-commit
+55bbea7ccbdbfec7bae69cd61c6ca6c7067f8a9c 5b8ed21fc1a7dec90deef57117242cff3a09d411 dtebar <dtebar@gmail.com> 1766288192 -0500	commit: auto-commit
+5b8ed21fc1a7dec90deef57117242cff3a09d411 829a896c2f3a91ea266d8e57505bf71f683a25bf dtebar <dtebar@gmail.com> 1766413090 -0500	commit: auto-commit
+829a896c2f3a91ea266d8e57505bf71f683a25bf 829a896c2f3a91ea266d8e57505bf71f683a25bf dtebar <dtebar@gmail.com> 1766420871 -0500	checkout: moving from main to feature/landscape-css-tests
+829a896c2f3a91ea266d8e57505bf71f683a25bf ee961a7125773cb387c013680793eda81093c026 dtebar <dtebar@gmail.com> 1766420885 -0500	commit: chore(testing): add Playwright landscape screenshots, tests and stylelint config
+ee961a7125773cb387c013680793eda81093c026 beb05410a616b617b996acef3be85dc908eb0f78 dtebar <dtebar@gmail.com> 1766420920 -0500	commit: chore: ignore node_modules and remove from index
+beb05410a616b617b996acef3be85dc908eb0f78 49148bca3b654eb77c96d19c5d5a5c77cf027c2a dtebar <dtebar@gmail.com> 1766421123 -0500	commit: test: update baseline screenshots and remove some !important from landscape css
+49148bca3b654eb77c96d19c5d5a5c77cf027c2a 216b0f15f626bd23dca22900435621c40937cea0 dtebar <dtebar@gmail.com> 1766443235 -0500	commit: test: add visual diff artifacts (landscape) 0 diffs
+216b0f15f626bd23dca22900435621c40937cea0 90b4c36fd6cf3521aba8d6ff68a9023ac1eab31f dtebar <dtebar@gmail.com> 1766443722 -0500	commit: ci: add Playwright visual-diff workflow
+90b4c36fd6cf3521aba8d6ff68a9023ac1eab31f 4ddcc3ef24a862a42306131aecf188f307728b8b dtebar <dtebar@gmail.com> 1766444366 -0500	commit: style: remove a few low-risk !important usages (main, stackedCards, title)
+4ddcc3ef24a862a42306131aecf188f307728b8b 8fe11aaa1ad9c698d73eb9473bfe21d55702f1b2 dtebar <dtebar@gmail.com> 1766444529 -0500	commit: ci: fix compare output step and reference its output in PR comment
+8fe11aaa1ad9c698d73eb9473bfe21d55702f1b2 907c946888dce17f12ad9d5b4f0fcf468e66e6ce dtebar <dtebar@gmail.com> 1766445055 -0500	commit: ci: give workflow permission to comment on PRs; style: remove low-risk !important from mediaQueries-v6.css (overflow-x, stacked-cards width, overlay properties)
+907c946888dce17f12ad9d5b4f0fcf468e66e6ce bc8ed442ce99a592f046197b6dce38af84820632 dtebar <dtebar@gmail.com> 1766445228 -0500	commit: revert: restore some !important entries in mediaQueries-v6.css after visual diffs showed regressions
+bc8ed442ce99a592f046197b6dce38af84820632 694e3176ff5fa1fee588cc4bdafd1d50cd5e23f8 dtebar <dtebar@gmail.com> 1766445402 -0500	commit: style(test): try removing !important from body overflow-x in mediaQueries-v6 (single change)
+694e3176ff5fa1fee588cc4bdafd1d50cd5e23f8 9263c0ae491fa3da417aeed260af82205571f12d dtebar <dtebar@gmail.com> 1766445544 -0500	commit: style(test): remove !important from .stacked-cards li width (single change)
+9263c0ae491fa3da417aeed260af82205571f12d 61979a236854d6828b6407c5b16140266aa8c59a dtebar <dtebar@gmail.com> 1766445693 -0500	commit: revert(style): restore !important on .stacked-cards li width; causes visual regression when removed
+61979a236854d6828b6407c5b16140266aa8c59a fb6b689692dd024c2211ee4fec39c131e9a85441 dtebar <dtebar@gmail.com> 1766445996 -0500	commit: style: add declaration-no-important rule and CONTRIBUTING guidance; remove low-risk margin-bottom !important in mediaQueries-v6
+fb6b689692dd024c2211ee4fec39c131e9a85441 3acef310e8e4e2fa204093c436b21d7f30c0c4d0 dtebar <dtebar@gmail.com> 1766446219 -0500	commit: revert(test): restore !important on stacked-cards margin-bottom after visual diffs at 344/415 widths
+3acef310e8e4e2fa204093c436b21d7f30c0c4d0 344ef764538335a4616826807891aff4d6685f4b dtebar <dtebar@gmail.com> 1766446676 -0500	commit: revert(test): restore !important on small breakpoint button font-size after visual diff
+344ef764538335a4616826807891aff4d6685f4b d7f46441bdc1a5580d5e5eb7a75887b10c60c405 dtebar <dtebar@gmail.com> 1766447361 -0500	commit: Remove !important from .stacked-cards box-sizing (320344) visual diff 0 across 7 viewports
+d7f46441bdc1a5580d5e5eb7a75887b10c60c405 4594af3a4271596117a9e3c28a0f6dfa75cfb430 dtebar <dtebar@gmail.com> 1766447760 -0500	commit: Add compare output artifact for margin-bottom experiment (reverted)
+4594af3a4271596117a9e3c28a0f6dfa75cfb430 62742f0ac2d807330099d9a75c3c303184d1fbe3 dtebar <dtebar@gmail.com> 1766447872 -0500	commit: Playwright experiments.
+62742f0ac2d807330099d9a75c3c303184d1fbe3 36043b97a388bd0f648571d2ddc938c9f6984766 dtebar <dtebar@gmail.com> 1766501327 -0500	commit: Landscape css exceptions.
+36043b97a388bd0f648571d2ddc938c9f6984766 1b87da178ec846d1e6ff52ea6f1bb946fec3425c dtebar <dtebar@gmail.com> 1766511893 -0500	commit: auto-commit
+1b87da178ec846d1e6ff52ea6f1bb946fec3425c befe1fe575dfb91a19198006ce3b8d4c4578e20a dtebar <dtebar@gmail.com> 1766535651 -0500	commit: auto-commit
+befe1fe575dfb91a19198006ce3b8d4c4578e20a 8d95bdc7c3ffe91e13763b00b514cf51ac920a64 dtebar <dtebar@gmail.com> 1766584223 -0500	commit: auto-commit
+8d95bdc7c3ffe91e13763b00b514cf51ac920a64 c81c01a45f4cd448ca00efc9b09806bf1b3ee5f0 dtebar <dtebar@gmail.com> 1766591097 -0500	commit: auto-commit
+c81c01a45f4cd448ca00efc9b09806bf1b3ee5f0 6593114ef167b5753bc07d759dae0e8a355c039b dtebar <dtebar@gmail.com> 1766596665 -0500	commit: auto-commit
+6593114ef167b5753bc07d759dae0e8a355c039b 58c40afa16a068f1c756d938a4d8b53c86b71031 dtebar <dtebar@gmail.com> 1766619524 -0500	commit: auto-commit
+58c40afa16a068f1c756d938a4d8b53c86b71031 3fa9b5a462ecd6c6101a1f19d4a2fe568f5b8bd2 dtebar <dtebar@gmail.com> 1766624381 -0500	commit: auto-commit
+3fa9b5a462ecd6c6101a1f19d4a2fe568f5b8bd2 f5a2277db8f8b7c951e745dc4cde5a8ccaf65476 dtebar <dtebar@gmail.com> 1766707825 -0500	commit: auto-commit
+f5a2277db8f8b7c951e745dc4cde5a8ccaf65476 c221eb6bfab2a87580d87502060a9b68769bd418 dtebar <dtebar@gmail.com> 1766767134 -0500	commit: auto-commit
+c221eb6bfab2a87580d87502060a9b68769bd418 b5c63d9076351b6b677b2d949ada339d2577c99f dtebar <dtebar@gmail.com> 1766885246 -0500	commit: auto-commit
+b5c63d9076351b6b677b2d949ada339d2577c99f e65da54b1af97f9ed468e24d75cceb1eee61a243 dtebar <dtebar@gmail.com> 1766890082 -0500	commit: chore: update .gitignore and remove dev/test files from repo
+e65da54b1af97f9ed468e24d75cceb1eee61a243 2000b9cf540508325647791a5801c138b3f736cf dtebar <dtebar@gmail.com> 1766894339 -0500	commit: auto-commit
+2000b9cf540508325647791a5801c138b3f736cf 4ccae3c03e9cd8d2f862fdf679b1b8d6f4c24601 dtebar <dtebar@gmail.com> 1766936581 -0500	commit: auto-commit
+4ccae3c03e9cd8d2f862fdf679b1b8d6f4c24601 d12f4c5d05094541dc345c0adbd1542e5f766e83 dtebar <dtebar@gmail.com> 1767033297 -0500	commit: auto-commit
+d12f4c5d05094541dc345c0adbd1542e5f766e83 cadcddee81987d10a6498728183431f6fdf64dfd dtebar <dtebar@gmail.com> 1767045630 -0500	commit: Your commit message here
+cadcddee81987d10a6498728183431f6fdf64dfd 55b79e9153e03c53c867489b8fcf237911dec300 dtebar <dtebar@gmail.com> 1767046091 -0500	commit: docs: add recommended Git setup to README
+55b79e9153e03c53c867489b8fcf237911dec300 0ee3586a27563df748096e67b664e74545961a1d dtebar <dtebar@gmail.com> 1767046455 -0500	commit: chore: add pinned requirements.txt
+0ee3586a27563df748096e67b664e74545961a1d 3eac4853d72b95df8c0fa277a8bea6ca98326383 dtebar <dtebar@gmail.com> 1767046653 -0500	commit: chore: add WhiteNoise and dj-database-url; read production settings from env vars
+3eac4853d72b95df8c0fa277a8bea6ca98326383 4f0b55a76274d753c21ffeebbd4ebbbbcd06b318 dtebar <dtebar@gmail.com> 1767047047 -0500	commit: chore: add .env.example, deploy.sh, README deploy docs, and production SECRET_KEY safety check
+4f0b55a76274d753c21ffeebbd4ebbbbcd06b318 6a8e70441609af9070939ab81c1f68faed00a15b dtebar <dtebar@gmail.com> 1767047172 -0500	commit: feat: add /health endpoint and test
+6a8e70441609af9070939ab81c1f68faed00a15b 89ef54a4744a8ffeb7f4c1268a4bddccf980849a dtebar <dtebar@gmail.com> 1767048547 -0500	commit: chore: load .env (python-dotenv); normalize env parsing (booleans, ALLOWED_HOSTS)
+89ef54a4744a8ffeb7f4c1268a4bddccf980849a f24da65323ea24ffa858d22b5ae0c43a4bd409e1 dtebar <dtebar@gmail.com> 1767051924 -0500	commit: fix: trim env values when parsing booleans to handle leading/trailing spaces
+f24da65323ea24ffa858d22b5ae0c43a4bd409e1 db6176248095c157c7a6453bee624f47f71eceb4 dtebar <dtebar@gmail.com> 1767053715 -0500	commit: chore: initialize repo for v6
+db6176248095c157c7a6453bee624f47f71eceb4 0000000000000000000000000000000000000000 dtebar <dtebar@gmail.com> 1767053715 -0500	Branch: renamed refs/heads/feature/landscape-css-tests to refs/heads/main
+0000000000000000000000000000000000000000 db6176248095c157c7a6453bee624f47f71eceb4 dtebar <dtebar@gmail.com> 1767053715 -0500	Branch: renamed refs/heads/feature/landscape-css-tests to refs/heads/main

@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid mb-0 pb-0">
+  <div class="row">
+   <div class="col-12 text-center">
+    <h1 class="header-title">Meet The Beatles!</h1>
+   </div>
+  </div>
+ </div>
+
+ <div class="container-fluid stacked-cards stacked-cards-slide mt-0 pt-0">
+  <div class="row">
+   <div class="col-md-12">
+    <ul class="list-unstyled d-flex flex-wrap justify-content-center">
+     {% if media_list %}
+      {% for media in media_list %}
+       {% if media.type == 'video' %}
+        <li class="slide slide{{ forloop.counter }}">
+         <div class="video-container">
+          <video class="video-slide"
+                 controls poster="/media/{{ media.phase }}/{{ media.path }}.jpg">
+           <source src="/media/{{ media.phase }}/{{ media.path }}.mp4" type="video/mp4"></source>
+           Your browser does not support this video.
+          </video>
+          <div class="overlay">{{ media.title }}</div>
+         </div>
+        </li>
+       {% endif %}
+      {% endfor %}
+     {% else %}
+      <li>No media available</li>
+     {% endif %}
+    </ul>
+   </div>
+  </div>
+ </div>
+
+ <div class="container-fluid mb-2 pb-2">
+  <div class="row">
+   <div id="phase-selection-container" class="col-12 col-md-4 mx-auto text-center">
+    <fieldset aria-label="Phase selection">
+     <legend class="visually-hidden">Select a Beatles Phase</legend>
+     <div class="btn-group d-flex justify-content-center flex-wrap">
+     {% for phase, label in phases %}
+      <a href="?phase={{ phase }}"
+         class="btn btn-primary phase-{{ phase }} {% if current_phase == phase %}active{% endif %}">
+       {{ label }}
+      </a>
+     {% endfor %}
+     </div>
+    </fieldset>
+   </div>
+  </div>
+ </div>
+
+<div class="container-fluid mb-0 pb-0 mt-2">
+  <div class="row">
+    <div class="col-12 col-md-8 text-container mx-auto">
+      {% for history in history_list %}
+        <div class="history-entry">
+          {{ history.content|safe }}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+ <div class="container-fluid mt-0 pt-0">
+  <div class="row">
+   <div id="mobile-rotation-prompt" class="rotation-prompt d-none text-center" aria-hidden="true">
+    <p class="rotation-text text-success mb-3" style='color:yellow !important;'>
+     Please rotate your device for the best experience.
+    </p>
+   </div>
+  </div>
+ </div>
+
+{% endblock content %}

@@ -1,0 +1,97 @@
+# Virtual Environment
+mtb_v5_venv/
+venv/
+ENV/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+/media
+/staticfiles
+/static
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.local
+
+# Project specific
+data/
+*.csv
+
+# Node
+node_modules/
+package-lock.json
+
+# Testing & Development
+playwright/
+playwright.config.ts
+test-results/
+test_*.py
+*_test.py
+*.spec.js
+*.spec.ts
+
+# Miscellaneous development files
+misc/
+mediaQueries-*.txt
+resolutions.txt
+*.bat
+*.ps1
+*.reg
+*backup*.txt
+
+# GitHub workflows (kept in repo but excluded from deployment)
+.github/
+
+# Development dependencies
+package.json
+
+# Coverage and test reports
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+coverage.xml
+*.cover
+
+# Local configuration
+*.local.py
+local_settings.py
+

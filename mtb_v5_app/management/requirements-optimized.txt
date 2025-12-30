@@ -1,0 +1,31 @@
+# Django Core
+Django==5.2.2
+asgiref==3.8.1
+sqlparse==0.5.3
+tzdata==2025.1
+
+# Django Extensions
+django-ckeditor-5==0.2.13
+django-crispy-forms==2.3
+django-debug-toolbar==5.1.0
+djlint==1.36.4
+
+# Image Processing
+pillow==11.2.1
+
+# CLI Tools (used in management commands)
+about-time==4.2.1
+alive-progress==3.2.0
+grapheme==0.6.0
+
+# Configuration
+python-dotenv==1.0.1
+PyYAML==6.0.2
+
+# Date/Time
+python-dateutil==2.9.0.post0
+pytz==2025.2
+
+# Utilities (auto-installed dependencies)
+packaging==24.2
+typing_extensions==4.14.1

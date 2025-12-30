@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "function-no-unknown": [true, { "ignoreFunctions": ["clamp", "min", "max"] }],
+    "no-invalid-double-slash-comments": null,
+    "color-no-invalid-hex": true,
+    "declaration-no-important": true
+  }
+}

@@ -1,0 +1,22 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+  .django-ckeditor-5 .ck-editor__main .ck-content,
+  .django-ckeditor-5 .ck-editor__editable {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .django-ckeditor-5 .ck-editor__editable * {
+    color: black !important;
+  }
+</style>
+{% endblock extrastyle %}
+
+{% block extrahead %}
+{{ block.super }}
+<script src="{% static 'js/admin-ckeditor.js' %}"></script>
+{% endblock extrahead %}
